@@ -1,0 +1,7 @@
+REGISTRY_GOOGLE_CLOUD=0
+REGISTRY=docker.io
+IMAGE=lagden/httpd
+
+DOCKER_TARGET_BUILD=main
+
+VERSION=base

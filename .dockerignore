@@ -1,0 +1,7 @@
+.*
+bin
+Dockerfile*
+README.md
+LICENSE
+
+!.config
