@@ -2,7 +2,7 @@
 
 [![Docker Release][dockerelease-img]][dockerelease]
 
-[dockerelease-img]:    https://img.shields.io/docker/v/lagden/httpd/asmttpd-0.4.6
+[dockerelease-img]:    https://img.shields.io/docker/v/lagden/httpd/golang-1.20
 [dockerelease]:        https://hub.docker.com/r/lagden/httpd
 
 

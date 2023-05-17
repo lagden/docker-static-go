@@ -1,11 +1,16 @@
-FROM alpine:latest as builder
-RUN wget https://github.com/nemasu/asmttpd/releases/download/0.4.6/asmttpd
-RUN chmod +x asmttpd
-RUN adduser -D static
+FROM golang:latest as builder
+COPY server.go .
+RUN go build \
+  -ldflags "-linkmode external -extldflags -static" \
+  -a server.go
+
+RUN groupadd --gid 1000 static \
+  && useradd --uid 1000 --gid static --shell /bin/bash --create-home static
+
 
 FROM scratch as main
 COPY --from=builder /etc/passwd /etc/passwd
-COPY --from=builder asmttpd /
+COPY --from=builder /go/server /
 
 USER static
 WORKDIR /home/static
