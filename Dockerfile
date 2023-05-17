@@ -1,4 +1,4 @@
-FROM golang:latest as builder
+FROM golang:1.20.4 as builder
 COPY server.go .
 RUN go build \
   -ldflags "-linkmode external -extldflags -static" \
