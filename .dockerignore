@@ -1,7 +1,5 @@
 .*
 bin
 Dockerfile*
-README.md
+README*
 LICENSE
-
-!.config
