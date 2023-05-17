@@ -3,4 +3,4 @@ ENV_BASE_DIRNAME="$(cd $(dirname ${BASH_SOURCE:-$0}) && pwd)"
 
 # ----------
 
-VERSION=golang-1.20.4
+VERSION=sws-2.16.0

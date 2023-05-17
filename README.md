@@ -2,17 +2,18 @@
 
 [![Docker Release][dockerelease-img]][dockerelease]
 
-[dockerelease-img]:    https://img.shields.io/docker/v/lagden/httpd/golang-1.20.4
+[dockerelease-img]:    https://img.shields.io/docker/v/lagden/httpd/sws-2.16.0
 [dockerelease]:        https://hub.docker.com/r/lagden/httpd
 
 
-This is a tiny HTTP Server written in Golang for static files.
+A cross-platform, high-performance & asynchronous web server for static files serving.  
+https://static-web-server.net/
 
 
 ## Usage
 
 ```
-docker run  -v ./dist:/home/static/dist -p 8080:8080 -it lagden/httpd /server -d /home/static/dist -p 8080
+docker run  -v ./dist:/home/static/dist -p 8080:8080 -it lagden/httpd:sws-2.16.0 /sws -d /home/static/dist -p 8080 -g info -q 10 -e false -c "*" 
 ```
 
 
