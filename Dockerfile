@@ -1,11 +1,11 @@
 # Builder
 # --------------------
 # --------------------
-FROM joseluisq/static-web-server:2.16.0-alpine AS builder
+FROM joseluisq/static-web-server:2.20 AS builder
 
 
 # Main
 # --------------------
 # --------------------
 FROM scratch as main
-COPY --from=builder /usr/local/bin/static-web-server /sws
+COPY --from=builder /static-web-server /sws

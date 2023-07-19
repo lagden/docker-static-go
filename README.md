@@ -2,7 +2,7 @@
 
 [![Docker Release][dockerelease-img]][dockerelease]
 
-[dockerelease-img]:    https://img.shields.io/docker/v/lagden/httpd/sws-2.16.0
+[dockerelease-img]:    https://img.shields.io/docker/v/lagden/httpd/latest
 [dockerelease]:        https://hub.docker.com/r/lagden/httpd
 
 
@@ -13,7 +13,7 @@ https://static-web-server.net/
 ## Usage
 
 ```
-docker run  -v ./dist:/home/static/dist -p 8080:8080 -it lagden/httpd:sws-2.16.0 /sws -d /home/static/dist -p 8080 -g info -q 10 -e false -c "*" 
+docker run  -v ./dist:/home/static/dist -p 8080:8080 -it lagden/httpd:latest /sws -d /home/static/dist -p 8080 -g info -q 10 -e false -c "*"
 ```
 
 

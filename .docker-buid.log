@@ -3,50 +3,21 @@
 #1 DONE 0.0s
 
 #2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 287B done
+#2 transferring dockerfile: 264B done
 #2 DONE 0.0s
 
-#3 [internal] load metadata for docker.io/joseluisq/static-web-server:2.16.0-alpine
-#3 ...
+#3 [internal] load metadata for docker.io/joseluisq/static-web-server:2.20
+#3 DONE 0.9s
 
-#4 [auth] joseluisq/static-web-server:pull token for registry-1.docker.io
-#4 DONE 0.0s
+#4 [builder 1/1] FROM docker.io/joseluisq/static-web-server:2.20@sha256:3291a00e8108b4ded78a690f39e495be50f65615b5e7c559fd0a20bf564c6ec0
+#4 CACHED
 
-#3 [internal] load metadata for docker.io/joseluisq/static-web-server:2.16.0-alpine
-#3 DONE 3.1s
+#5 [main 1/1] COPY --from=builder /static-web-server /sws
+#5 DONE 0.0s
 
-#5 [builder 1/1] FROM docker.io/joseluisq/static-web-server:2.16.0-alpine@sha256:df2f854ff6f6726d3414ff1786e4cf99499f6ab9b5d3a1b40af082a294c91f77
-#5 resolve docker.io/joseluisq/static-web-server:2.16.0-alpine@sha256:df2f854ff6f6726d3414ff1786e4cf99499f6ab9b5d3a1b40af082a294c91f77 0.0s done
-#5 sha256:df2f854ff6f6726d3414ff1786e4cf99499f6ab9b5d3a1b40af082a294c91f77 3.91kB / 3.91kB done
-#5 sha256:4cee0586ba300f213b3513c07f701fb363bafea5e33803987d9a27b32d0c86db 1.24kB / 1.24kB done
-#5 sha256:9cadf5ca830f9ab72d4a2fc24bda036a0f0e8fab62afa2916f2ea72363b27431 4.27kB / 4.27kB done
-#5 sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 0B / 3.37MB 0.1s
-#5 sha256:31b803aad0bb82b5efcba55add89fc2acb02b1f3e3f7f7481c4ce7206f3baffe 0B / 622.55kB 0.1s
-#5 sha256:c90e4a54043f786ca4ce5aa5f96293cd0d38d77ed503536a9c5c2b0157e6a8f8 0B / 3.09MB 0.1s
-#5 sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 3.37MB / 3.37MB 0.3s done
-#5 sha256:c90e4a54043f786ca4ce5aa5f96293cd0d38d77ed503536a9c5c2b0157e6a8f8 3.09MB / 3.09MB 0.4s done
-#5 extracting sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09
-#5 sha256:71996e55282c9c13f33d0ea2efe7a2c1d4c4ee3e1c02afb7e77d618f7853d5a5 0B / 229B 0.4s
-#5 sha256:c28175917e5f35f0e9e0a5a388eea020e0b474d72a02c90e6c2832e71c8ac66c 0B / 11.81kB 0.4s
-#5 extracting sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 0.1s done
-#5 sha256:71996e55282c9c13f33d0ea2efe7a2c1d4c4ee3e1c02afb7e77d618f7853d5a5 229B / 229B 0.5s done
-#5 extracting sha256:31b803aad0bb82b5efcba55add89fc2acb02b1f3e3f7f7481c4ce7206f3baffe
-#5 sha256:31b803aad0bb82b5efcba55add89fc2acb02b1f3e3f7f7481c4ce7206f3baffe 622.55kB / 622.55kB 0.5s done
-#5 sha256:c28175917e5f35f0e9e0a5a388eea020e0b474d72a02c90e6c2832e71c8ac66c 11.81kB / 11.81kB 0.7s done
-#5 extracting sha256:31b803aad0bb82b5efcba55add89fc2acb02b1f3e3f7f7481c4ce7206f3baffe 0.1s done
-#5 extracting sha256:c90e4a54043f786ca4ce5aa5f96293cd0d38d77ed503536a9c5c2b0157e6a8f8
-#5 extracting sha256:c90e4a54043f786ca4ce5aa5f96293cd0d38d77ed503536a9c5c2b0157e6a8f8 0.1s done
-#5 extracting sha256:71996e55282c9c13f33d0ea2efe7a2c1d4c4ee3e1c02afb7e77d618f7853d5a5 done
-#5 extracting sha256:c28175917e5f35f0e9e0a5a388eea020e0b474d72a02c90e6c2832e71c8ac66c done
-#5 DONE 1.1s
-
-#6 [main 1/1] COPY --from=builder /usr/local/bin/static-web-server /sws
-#6 DONE 0.0s
-
-#7 exporting to image
-#7 exporting layers
-#7 exporting layers 0.0s done
-#7 writing image sha256:a381c9c52069f5354ebaa90e7835a492cdfd7621498f79c7906e88f4824a0afb done
-#7 naming to docker.io/lagden/httpd:sws-2.16.0 done
-#7 naming to docker.io/lagden/httpd:latest done
-#7 DONE 0.1s
+#6 exporting to image
+#6 exporting layers 0.1s done
+#6 writing image sha256:3bbb7fbdb9052ba457148773fff126b6b640ec614068735f5184912fb8240706 done
+#6 naming to docker.io/lagden/httpd:sws-2.20 done
+#6 naming to docker.io/lagden/httpd:latest done
+#6 DONE 0.1s
